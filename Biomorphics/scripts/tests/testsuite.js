@@ -9,8 +9,6 @@
 	// extension so RequireJS resolves them as relative paths rather than using
 	// the `baseUrl` value supplied above.
 	var testModules = [
-		"example/model/PlayerTests.js",
-		"example/model/PegiRatingsTests.js",
 		"model/TreeTests.js",
 		"model/WorldTests.js"
 	];

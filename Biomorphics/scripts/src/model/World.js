@@ -1,6 +1,10 @@
 define(function (require) {
 	"use strict";
 	
+	// Import underscore.
+	var _ = require("vendor/underscore");
+
+	
 	/*
 	 * Create a World domain object
 	 */
@@ -13,6 +17,11 @@ define(function (require) {
 	
 		// Repoint the Constructor function.
 		constructor: World,
+		
+		addTree: function (tree) {
+			this.trees.push(tree);
+			return this;
+		},
 		
 		getTrees: function () {
 			return this.trees;

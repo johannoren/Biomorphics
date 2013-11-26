@@ -22,9 +22,19 @@ define(function (require) {
 		QUnit.ok(world.toString().indexOf('World contains') !== -1);
 	});
 
-	QUnit.test("Add a tree", function () { 
+	QUnit.test("Add a tree to the world", function () { 
 		var world = new World();
-		QUnit.ok(world.toString().indexOf('World contains') !== -1);
+		var tree = new Tree(0);
+		world.addTree(tree);
+		QUnit.equal(world.getTrees().length, 1);
+	});
+
+	QUnit.test("Add many trees", function () { 
+		var world = new World();
+		world.addTree(new Tree(0)).addTree(new Tree(0)).addTree(new Tree(0));
+		
+		QUnit.equal(world.getTrees().length, 3);
+		
 	});
 
 	

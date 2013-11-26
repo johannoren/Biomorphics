@@ -5,6 +5,13 @@ define(function (require) {
 	 * Create a Tree domain object
 	 */
 	function Tree(energy, name) {
+		if (energy === undefined) {
+			throw new Error("Energy argument missing");
+		}
+		if (name === undefined) {
+			name = "N/A";
+		}
+	
 		this.energy = energy;
 		this.age    = 0;
 		this.name   = name;

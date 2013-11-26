@@ -23,5 +23,11 @@ define(function (require) {
 		QUnit.ok(tree.toString().indexOf('Mr') !== -1);
 	});
 
+	QUnit.test("Validation", function () {
+		raises(function () {
+			var t = new Tree();
+		}, Error, "Must throw error when omitting constructor arguments");
+	});
+
 	
 });
