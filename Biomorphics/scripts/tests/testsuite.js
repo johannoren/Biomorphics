@@ -10,8 +10,11 @@
 	// the `baseUrl` value supplied above.
 	var testModules = [
 		"model/TreeTests.js",
-		"model/WorldTests.js"
-	];
+		"model/WorldTests.js",
+		"simulation/SimulationEngineTests.js",
+		"simulation/SimulationStateTests.js"
+
+		];
 	
     // Resolve all testModules and then start the Test Runner.
 	require(testModules, function(){
